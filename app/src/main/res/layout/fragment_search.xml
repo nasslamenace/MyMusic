@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Layout gobal de la page de recherche-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:columnCount="1"
+    android:rowCount="10">
+
+    <!--Layout de la fonction de recherche-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:columnCount="1"
+        android:rowCount="1">
+
+        <!--Texte édition de recherche-->
+        <EditText
+            android:id="@+id/EditTextItem"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Bouton de recherche-->
+        <Button
+            android:id="@+id/ButtonSearchItem"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/bgbutton"
+            android:fontFamily="@font/audiowide"
+            android:text="Search" />
+
+    </LinearLayout>
+
+    <!--Liste des résultats de recherche-->
+    <ListView
+        android:id="@+id/listViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_music"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+</LinearLayout>
+

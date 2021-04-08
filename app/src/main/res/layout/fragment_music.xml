@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Layout global de la page-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:columnCount="1"
+    android:orientation="vertical"
+    android:rowCount="5"
+    tools:context=".MainActivity">
+
+    <!--Cover de la musique-->
+    <ImageView
+        android:id="@+id/imageViewDetail"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_columnWeight="1"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher">
+    </ImageView>
+
+    <!--Texte d'artiste-->
+    <TextView
+        android:id="@+id/TextDetailArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/audiowide"></TextView>
+
+    <!--Texte d'album-->
+    <TextView
+        android:id="@+id/TextDetailAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"></TextView>
+
+    <!--Texte de titre-->
+    <TextView
+        android:id="@+id/TextDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"></TextView>
+
+    <!--Layout des boutons de favs-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--Groupe de coche fav-->
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:text="Favoris: ">
+
+            <!--Texte de favoris-->
+            <TextView
+                android:id="@+id/TextViewFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/audiowide"
+                android:text="Favoris: "></TextView>
+
+            <!--Coche fav oui-->
+            <RadioButton
+                android:id="@+id/RadioButtonYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/audiowide"
+                android:text="Oui"></RadioButton>
+
+            <!--Coche fav non-->
+            <RadioButton
+                android:id="@+id/RadioButtonNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/audiowide"
+                android:text="non"></RadioButton>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!--Layout des boutons link & play-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <!--Button de lien vers Deezer-->
+        <Button
+            android:id="@+id/ButtonDeezer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bgbutton"
+            android:fontFamily="@font/audiowide"
+            android:text="Voir sur Deezer"></Button>
+
+        <!--Button Play Music-->
+        <Button
+            android:id="@+id/ButtonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bgbutton"
+            android:fontFamily="@font/audiowide"
+            android:text="Play"></Button>
+    </LinearLayout>
+</LinearLayout>
